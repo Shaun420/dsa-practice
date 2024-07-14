@@ -25,13 +25,14 @@ while (n > 0):
 		n -= 1
 	leftRight -= 1
 	# Right to left
-	for i in range(rightLeft - 1, bottomTop - rightLeft, -1):
+	# print("rightleft loop: {0}".format(list(range(rightLeft - 1, order - rightLeft - 1, -1))))
+	for i in range(rightLeft - 1, order - rightLeft - 1, -1):
 		print(m[rightLeft][i], end=" ")
 		n -= 1
 	topBottom -= 1
-	print("topBottom: {0} bottomTop: {1}".format(topBottom, bottomTop))
+	# print("topBottom: {0} bottomTop: {1}".format(topBottom, bottomTop))
 	# Bottom to top
-	for i in range(bottomTop, leftRight - bottomTop, -1):
+	for i in range(bottomTop, order - bottomTop - 1, -1):
 		print(m[i][order - bottomTop - 1], end=" ")
 		n -= 1
 	rightLeft -= 1
